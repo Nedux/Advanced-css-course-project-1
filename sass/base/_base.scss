@@ -1,0 +1,24 @@
+/* Needed to overwrite all of the formating that comes from browsers */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    /* Inherited */
+    /* box-sizing: border-box; */
+    box-sizing: inherit;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/* Is used for root properties */
+html {
+    /* Initial root font-size should be always set as percentge just because it would allow users with different font-size set in their browser*/
+    font-size: 62.5%;
+}
+
+/* Setting font related stuff in the body is more efficient (because of inheritance) */
+body { 
+    box-sizing: border-box;
+}
