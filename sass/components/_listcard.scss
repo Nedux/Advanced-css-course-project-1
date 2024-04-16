@@ -1,0 +1,29 @@
+.listcard{
+    padding: 2rem;
+    text-align: center;
+    border-radius: 3px;
+    background-color: rgba($color-grey-light-1, 0.8);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform .2s;
+
+
+
+    &__icon{
+        font-size: 6.5rem;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        margin: auto;
+    }
+
+
+    &__paragraph{
+        font-size: 1.6rem;
+    }
+
+    &:hover{
+        transform: translateY(-2rem) scale(1.1);
+        cursor: pointer;
+    }
+}

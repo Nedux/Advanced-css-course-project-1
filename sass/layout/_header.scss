@@ -6,7 +6,7 @@
         linear-gradient(to right bottom, rgba($color-primary-light, 0.8), 
         rgba($color-primary-dark, 0.8)), 
         url(../img/hero.jpg);
-    background-size: cover;
+    background-size: cover; // Zooms in the image if needed
     background-position: top;
     
     position: relative; /* So that .logo-box relative would work */
