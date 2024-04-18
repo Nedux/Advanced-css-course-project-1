@@ -67,10 +67,8 @@
 .btn-text {
     &:link,
     &:visited{
-        display: inline-block;
         font-size: 2rem;
         color: $color-primary;
-        position: absolute;
         text-decoration: none;
         border-bottom: 1px $color-primary solid;
         padding: .7rem .4rem;
