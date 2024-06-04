@@ -1,3 +1,8 @@
+/* Setting font related stuff in the body is more efficient (because of inheritance) */
+body { 
+    box-sizing: border-box;
+}
+
 /* Needed to overwrite all of the formating that comes from browsers */
 *,
 *::before,
@@ -14,11 +19,10 @@
 
 /* Is used for root properties */
 html {
-    /* Initial root font-size should be always set as percentge just because it would allow users with different font-size set in their browser*/
+    /* Initial root font-size should be always set as percentge just because it would allow users with different font-size set in their browser
+       Asumming that browsser default is 16px then our 1rem will be 10px.
+    */
     font-size: 62.5%;
 }
 
-/* Setting font related stuff in the body is more efficient (because of inheritance) */
-body { 
-    box-sizing: border-box;
-}
+
