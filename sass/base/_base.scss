@@ -17,9 +17,6 @@ body {
     /* Inherited */
     /* box-sizing: border-box; */
     box-sizing: inherit;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
 }
 
 /* Is used for root properties */
@@ -40,8 +37,10 @@ html {
     @include respond(tab-port){
         font-size: 50%; // 1rem = 8px
     }
-    
-    
 }
 
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
 
