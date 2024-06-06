@@ -10,6 +10,12 @@
     transform: skewX(-7deg);
     transition: all .8s;
 
+    @include respond(tab-land){
+        width: 100%;
+        transform: skewX(0);
+    }
+
+
     &__shape{
         transform: skewX(7deg);
         width: 15rem;
@@ -18,12 +24,24 @@
         shape-outside: circle(50% at 50% 50%); // Only works with floated elements with defines width/height
         clip-path: circle(50% at 50% 50%);
         margin-right: 4rem;
+
+        @include respond(tab-land){
+            transform: skewX(0);
+        }
+
+        @include respond(phone){
+            display: block;
+            float: initial;
+            margin: 0 auto;
+        }
     }
+    
     &__img{
         height: 100%;
         transform: translateX(-3.5rem) scale(1.5);
         transition: all .8s;
     }
+
     &__caption{
         text-transform: uppercase;
         text-align: center;
@@ -36,6 +54,16 @@
 
         color: $color-white;
     }
+
+    @include respond(phone){
+        &__text{
+            padding-top: 3rem;
+            display: block;
+            width: 100%;
+
+        }
+    }
+
 
     &:hover &__img{
         filter: blur(3px) brightness(85%);

@@ -1,6 +1,11 @@
 /* Setting font related stuff in the body is more efficient (because of inheritance) */
 body { 
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-land){
+        padding: 0;
+    }
 }
 
 /* Needed to overwrite all of the formating that comes from browsers */
@@ -23,6 +28,20 @@ html {
        Asumming that browsser default is 16px then our 1rem will be 10px.
     */
     font-size: 62.5%;
+
+    @include respond(big-desktop){
+        font-size: 75%; // 1 rem = 12px 
+    }
+    
+    @include respond(tab-land){
+        font-size: 56.25%; // 1rem = 9px
+    }
+    
+    @include respond(tab-port){
+        font-size: 50%; // 1rem = 8px
+    }
+    
+    
 }
 
 

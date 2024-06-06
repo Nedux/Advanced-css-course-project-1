@@ -2,7 +2,6 @@
 .card{
     perspective: 100rem; // For nice 3d spin
     -moz-perspective: 150rem;
-
     position: relative;
     height: 52rem; // This is needed because when all child elemets are floated - width collapses
 
@@ -12,7 +11,6 @@
         background-blend-mode: screen; // Alternative to transparacy
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        position: relative;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
         
@@ -46,6 +44,7 @@
             }
         }
     }
+
     &__header{ 
         font-size: 2.8rem;
         font-weight: 300;
@@ -62,6 +61,24 @@
             -webkit-box-decoration-break: clone;
             box-decoration-break: clone;
         }
+    }
+
+    &__title--1 {
+        background-image: linear-gradient(to right, 
+            rgba($color-secondary-light, .85), 
+            rgba($color-secondary-dark, .85));
+    }
+
+    &__title--2 {
+        background-image: linear-gradient(to right, 
+            rgba($color-primary-light, .85), 
+            rgba($color-primary-dark, .85));
+    }
+
+    &__title--3 {
+        background-image: linear-gradient(to right bottom, 
+            rgba($color-tertiary-light, .85), 
+            rgba($color-tertiary-dark, .85));
     }
 
     &__details{
@@ -81,7 +98,6 @@
             }
         }
     }
-
     
     &__side{
         box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
@@ -134,5 +150,56 @@
     &__price-value {
         font-size: 6rem;
         font-weight: 100;
+    }
+
+    @include respond(tab-port){
+        height: auto;
+        box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
+
+    
+        &__header{ 
+            top: 16rem;
+            width: 85%;
+
+            &--3{
+                top: 12rem;
+                width: 75%;
+            }
+        }
+    
+        &__side{
+            height: 60rem;
+            padding-bottom: 10rem;
+            position: relative;
+            box-shadow: none;
+            
+            &--back{
+                height: 38rem;
+                margin-top: -13rem;
+                padding: 10rem 0 0;
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+    
+        &:hover &__side--front{
+            transform: rotateY(0);
+        }
+    
+    
+        &__price {
+            margin-bottom: 4rem;
+        }
+    
+    }
+
+    @include respond(phone){
+        &__header{ 
+            width: 90%;
+
+            &--3{
+                width: 75%;
+            }
+        }
     }
 }

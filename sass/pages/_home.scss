@@ -1,14 +1,18 @@
 .section-about {
     background-color: $color-grey-light-1;
-    padding: 25rem;
+    padding: 25rem 0;
     margin-top: -25vh;
+
+    @include respond(tab-port){
+        padding: 25rem 0;
+    }
 }
 
 .section-features{
     padding: 20rem 0;
     background-image:
-    linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),  
-    url(../img/nat-4.jpg);
+        linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),  
+        url(../img/nat-4.jpg);
     background-size: cover;
     // Skew trick for background
     transform: skewY(-7deg);
@@ -17,18 +21,30 @@
     & > * { // Direct child selector better than in this case better than "& row" - since new thing might be added later 
         transform: skewY(7deg); // Skeq back
     }
+
+    @include respond(tab-port){
+        padding: 15rem 0 10rem;
+    }
 }
 
 .section-tours{
     background-color: $color-grey-light-1;
-    padding: 25rem 0 15rem 0;
+    padding: 25rem 0 15rem;
     margin-top: -10rem;
+
+    @include respond(tab-port){
+        padding: 18rem 0 10rem;
+    }
 }
 
 .section-stories{
     background-color: $color-grey-light-1;
     padding: 15rem 0;
     position: relative;
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
     
     &__heading{
         position: relative;
@@ -42,20 +58,32 @@
 .section-booking {
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
 }
 
 .book{
     // 2 images per background + cool linear gradient
     background-image: linear-gradient(105deg, rgba($color-white, .9) 50%, transparent 50% 100%), url(../img/nat-10.jpg);
     background-size: cover;
-
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-
-
     height: 50rem;
+
+    @include respond(tab-port){
+        background-image: linear-gradient(105deg, rgba($color-white, .85) 100%, transparent 100% 100%), url(../img/nat-10.jpg);
+        height: 55rem;
+    }
+    
     &__form{
         width: 50%;
         padding: 6rem;
+
+        @include respond(tab-port){
+            width: 100%;
+            padding: 6rem 2rem;
+        }
     }
 }
