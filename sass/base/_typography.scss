@@ -14,10 +14,10 @@ body {
     margin-bottom: 6rem;
     &--main{
         display: block;
+        text-align: center;
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
-    
         animation-name: moveInLeft;
         animation-duration: .8s;
 
@@ -33,9 +33,12 @@ body {
     }
     &--sub{
         display: block;
-        font-size: 2rem;
+        text-align: center;
+        font-size: 1.9rem;
         font-weight: 700;
         letter-spacing: 1.7rem;
+        animation-name: moveInRight;
+        animation-duration: .8s;
         
         @include respond(phone){
             letter-spacing: .5rem;
