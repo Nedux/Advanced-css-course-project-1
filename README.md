@@ -1,6 +1,6 @@
 
 # Context
-[Final product is deployed here](https://nedux.github.io/Advanced-css-course-project-1/).
+[Final product is deployed here](https://nedux.github.io/Advanced-css-course-project-1/)
 
 Pure HTML + SASS (no CSS grid, FlexBox etc.)
 
