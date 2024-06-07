@@ -1,5 +1,6 @@
 
 # Context
+[Final product is deployed here](https://nedux.github.io/Advanced-css-course-project-1/).
 Pure HTML + SASS (no CSS grid, FlexBox etc.)
 
 Following along [this tutorial](https://www.udemy.com/course/advanced-css-and-sass).
