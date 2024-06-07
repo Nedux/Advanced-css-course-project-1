@@ -31,6 +31,11 @@
         width: 100%;
     }
 
+    &__checkbox:checked ~ .navigation__nav > ul > li {
+        display: block;
+    }
+
+
     &__background{
         width: 6rem;
         height: 6rem;
@@ -71,6 +76,7 @@
 
     &__item{
         margin: 1.5rem;
+        display: none;
     }
 
     &__link{
@@ -109,8 +115,13 @@
         &::after{
             display: inline-block;
             width: 3rem;
-            height: 1px;
+            height: 2px;
             background-color: $color-grey-dark-2;
+            user-select: none;
+        }
+        
+        &:before{
+            height: 2px;
         }
 
         &:before,
@@ -140,7 +151,6 @@
             top: -1rem;
         }
         &::after{
-            height: 1.5px;
             top: 1rem;
         }
     }
@@ -160,6 +170,5 @@
         transform: rotate(-135deg);
         height: 1.5px !important;
     }
-
 
 }

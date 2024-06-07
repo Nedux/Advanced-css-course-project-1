@@ -20,7 +20,7 @@
             url(../img/hero.jpg);
     }
 
-    @include respond(phone){
+    @include respond(tab-port){
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     }
 
@@ -31,6 +31,7 @@
     }
     &__logo{
         height: 3.5rem;
+        user-select: none;
     }
     &__logo-box:hover &__logo{
         animation-name: logo-move-in;
