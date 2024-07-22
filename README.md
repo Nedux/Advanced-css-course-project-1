@@ -23,6 +23,7 @@ I am also taking notes on any solutions or hacks that might be new to me.
 # To run
 `npm install -g node-sass`
 `npm run compile:start`
+
 Save any of the .scss files
 
 Open index.html in your browser.
